@@ -90,6 +90,9 @@ class puppet::server(
   # initialize a template file then ignore
   file { '/vagrant/nodes.pp':
     ensure  => present,
+    owner   => undef,
+    group   => undef,
+    mode    => undef,
     replace => false,
     source  => 'puppet:///modules/puppet/nodes.pp',
   }
